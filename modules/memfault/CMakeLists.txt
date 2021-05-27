@@ -7,3 +7,4 @@
 zephyr_library()
 zephyr_library_sources(memfault_integration.c)
 zephyr_include_directories(config)
+zephyr_library_sources_ifdef(CONFIG_MEMFAULT_INTERNAL_FLASH_BACKED_COREDUMP memfault_flash_coredump_storage.c)
